@@ -1,0 +1,38 @@
+{
+  "name": "agi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:portable": "APP_DATA_DIR=local-data/portable APP_INSTANCE_NAME=Portable next dev --port 3000",
+    "dev:mac": "APP_DATA_DIR=local-data/mac APP_INSTANCE_NAME=Mac next dev --port 3001",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run build",
+    "start": "next start",
+    "start:portable": "APP_DATA_DIR=local-data/portable APP_INSTANCE_NAME=Portable next start --port 3000",
+    "start:mac": "APP_DATA_DIR=local-data/mac APP_INSTANCE_NAME=Mac next start --port 3001"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
